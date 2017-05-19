@@ -21,7 +21,7 @@
       "configuration": {
          "properties": {
             "jsonnet.executablePath": {
-               "default": null,
+               "default": "~/src/kube.libsonnet/bin",
                "description": "Location of the `jsonnet` executable.",
                "type": "string"
             },

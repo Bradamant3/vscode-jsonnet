@@ -1,55 +1,54 @@
 # Jsonnet Support for Visual Studio Code
 
-A simple bare-bones extension providing simple syntax highlighting
-for [Jsonnet][jsonnet] files (specifically, files with the `.jsonnet`
-and `.libsonnet` suffixes), as well as a Markdown-style preview pane
-that auto-updates every time you save.
+This extension provides the following helper tools for writing 
+[Jsonnet][jsonnet] files in Visual Studio Code. These files 
+can be defined with the `.jsonnet` or `.libsonnet` file extension.
+
+* Syntax highlighting
+* Markdown-style preview pane for YAML or JSON output
+* Tooltip help for [writing **ksonnet** files][ksonnet] 
+for Kubernetes configurations
 
 ![Jsonnet preview][jsonnet-demo]
 
-## Usage
+## Install
 
-Syntax highlighting works out of the box. Just open any `.jsonnet` or
-`.libsonnet` file, and it will magically work.
+For syntax highlighting only, follow the instructions at 
+https://marketplace.visualstudio.com/items?itemName=heptio.jsonnet.
 
-To enable the Jsonnet preview pane, it is necessary to install the
-Jsonnet command line tool (_e.g._, through `brew install jsonnet`). If
-you don't add the `jsonnet` executable to the `PATH` then you will
-need to customize `jsonnet.executablePath` in your `settings.json`, so
-that the extension knows where to find it.
+The Jsonnet preview pane requires the Jsonnet command line tool.
+Run:
 
-After this, you can use the keybinding for `jsonnet.previewToSide` (by
-default this is `shift+ctrl+i`, or `shift+cmd+i` on macOS), and the
-preview pane will open as in the picture above.
+```bash
+brew install jsonnet
+```
 
-## Customization
+Add the path to the Jsonnet executable to your $PATH. Or you 
+can specify it in the `jsonnet.executablePath` field of your 
+VS Code `settings.json`.
 
-This extension exposes the following settings, which can be cusomized
-in `settings.json`:
+NOTE: On Windows, you must specify `jsonnet.executablePath`.
 
-* `jsonnet.executablePath`: Tells the extension where to find the
-  `jsonnet` executable, if it's not on the `PATH`. (NOTE: This setting
-  is always necessary on Windows.)
+## Configure and run
 
-This extension exposes the following commands, which can be bound to
-keys:
+Default keyboard shortcuts for the preview pane:
 
-* `jsonnet.previewToSide`: Compiles the Jsonnet file to JSON, places
-  result in a "preview" window in the pane to the right of the active
-  pane, or in the current pane if active window is pane 3 (since
-  vscode only allows 3 panes). Default: bound to `shift+ctrl+i` (or
-  `shift+cmd+i` on macOS).
-* `jsonnet.previewToSide`: Compiles the Jsonnet file to JSON, places
-  result in a "preview" window in the current active pane. Default: no
-  keybinding.
-* `jsonnet.extStrs`: An object of variable, value pairs. Allows you to
-  customize the external variables passed to the `jsonnet` command
-  line. It can be particularly useful to set this in a workspace
-  configuration, so that you can set different variables on a
-  per-project basis.
-* `jsonnet.outputFormat`: A choice of two string literals: `["json",
-  "yaml"]`. This tells the extension what format you'd like the output
-  to be (_i.e._, allows you to either output JSON or YAML).
+* On Mac OS: Shift-Command-I
+* On Windows: Ctrl+Shift+I
+
+You can customize these shortcuts in the VS Code `keybindings.json` file.
+
+You can also specify the following VS Code settings:
+
+* ``jsonnet.extStrs`: An object that defines a set of key-value pairs. 
+Lets you customize external variables to pass to the `jsonnet` command line. 
+For example, you can set different variables for different projects in a 
+workspace configuration. Default value null.
+* `jsonnet.outputFormat`: lets you specify whether to preview the output
+in JSON or YAML. Default value `yaml`.
+* `jsonnet.server`: lets you specify a Jsonnet language server for static
+analysis. Default value null.
 
 [jsonnet]: http://jsonnet.org/ "Jsonnet"
+[ksonnet]: https://github.com/ksonnet/ksonnet-lib "ksonnet"
 [jsonnet-demo]: https://raw.githubusercontent.com/heptio/vscode-jsonnet/master/images/kube-demo.gif
