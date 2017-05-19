@@ -31,16 +31,18 @@ NOTE: On Windows, you must specify `jsonnet.executablePath`.
 
 ## Configure and run
 
-Default keyboard shortcuts for the preview pane:
+Syntax highlighting requires no additional setup.
+
+To view the preview pae, you can use the default keyboard shortcuts:
 
 * On Mac OS: Shift-Command-I
 * On Windows: Ctrl+Shift+I
 
-You can customize these shortcuts in the VS Code `keybindings.json` file.
+Or you can customize these shortcuts in the VS Code `keybindings.json` file.
 
 You can also specify the following VS Code settings:
 
-* ``jsonnet.extStrs`: An object that defines a set of key-value pairs. 
+* `jsonnet.extStrs`: An object that defines a set of key-value pairs. 
 Lets you customize external variables to pass to the `jsonnet` command line. 
 For example, you can set different variables for different projects in a 
 workspace configuration. Default value null.
