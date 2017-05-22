@@ -27,16 +27,13 @@ Add the path to the Jsonnet executable to your $PATH. Or you
 can specify it in the `jsonnet.executablePath` field of your 
 VS Code `settings.json`.
 
-NOTE: On Windows, you must specify `jsonnet.executablePath`.
-
 ## Configure and run
 
 Syntax highlighting requires no additional setup.
 
-To view the preview pae, you can use the default keyboard shortcuts:
+To view the preview pane, you can use the default keyboard shortcut:
 
 * On Mac OS: Shift-Command-I
-* On Windows: Ctrl+Shift+I
 
 Or you can customize these shortcuts in the VS Code `keybindings.json` file.
 
