@@ -35,7 +35,10 @@ To view the preview pane, you can use the default keyboard shortcut:
 
 * On Mac OS: Shift-Command-I
 
-Or you can customize the keyboard shortcut for `jsonnet.previewToSide` in the VS Code `keybindings.json` file.
+Or you can customize the following settings in the VS Code `keybindings.json` file:
+
+* `jsonnet.preview`: keybinding to view the Jsonnet preview in a separate tab from your code. No default keybinding.
+* `jsonnet.previewToSide`: keybinding to view the Jsonnet preview in a separate pane, side-by-side with your code. Default is Shift-Command-I.
 
 You can specify the following VS Code settings in your `settings.json` file:
 
