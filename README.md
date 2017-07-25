@@ -35,17 +35,14 @@ To view the preview pane, you can use the default keyboard shortcut:
 
 * On Mac OS: Shift-Command-I
 
-Or you can customize these shortcuts in the VS Code `keybindings.json` file.
+Or you can customize the keyboard shortcut for `jsonnet.previewToSide` in the VS Code `keybindings.json` file.
 
-You can also specify the following VS Code settings:
+You can specify the following VS Code settings in your `settings.json` file:
 
-* `jsonnet.extStrs`: An object that defines a set of key-value pairs. 
-Lets you customize external variables to pass to the `jsonnet` command line. 
-For example, you can set different variables for different projects in a 
-workspace configuration. Default value null.
-* `jsonnet.outputFormat`: lets you specify whether to preview the output
-in JSON or YAML. Default value `yaml`.
+* `jsonnet.executablePath`: Path to the Jsonnet executable. Default value null. You can specify this path here, or in your $PATH environment variable instead.
+* `jsonnet.extStrs`: An object that defines a set of key-value pairs. Lets you customize external variables to pass to the `jsonnet` command line. For example, you can set different variables for different projects in a workspace configuration. Default value null.
 * `jsonnet.libPaths`: lets you specify additional paths to search for libraries when compiling Jsonnet code. Default value null.
+* `jsonnet.outputFormat`: lets you specify whether to preview the output in JSON or YAML. Default value `yaml`.
 
 [jsonnet]: http://jsonnet.org/ "Jsonnet"
 [ksonnet]: https://github.com/ksonnet/ksonnet-lib "ksonnet"
