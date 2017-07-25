@@ -45,8 +45,7 @@ For example, you can set different variables for different projects in a
 workspace configuration. Default value null.
 * `jsonnet.outputFormat`: lets you specify whether to preview the output
 in JSON or YAML. Default value `yaml`.
-* `jsonnet.server`: lets you specify a Jsonnet language server for static
-analysis. Default value null.
+* `jsonnet.libPaths`: lets you specify additional paths to search for libraries when compiling Jsonnet code. Default value null.
 
 [jsonnet]: http://jsonnet.org/ "Jsonnet"
 [ksonnet]: https://github.com/ksonnet/ksonnet-lib "ksonnet"
